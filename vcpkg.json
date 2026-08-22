@@ -1,0 +1,8 @@
+{
+    "name": "argus-engine",
+    "version": "1.0.0",
+    "dependencies": [
+        "gtest"
+    ],
+    "builtin-baseline": "7f3781e19cc7d4e4882a4caec01668c6f7b5c163"
+}
