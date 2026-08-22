@@ -24,7 +24,11 @@ if(MSVC)
         /Gw
         /wd4324
     )
-    target_compile_definitions(argus_compiler_flags INTERFACE _CRT_SECURE_NO_WARNINGS)
+    target_compile_definitions(argus_compiler_flags INTERFACE 
+        _CRT_SECURE_NO_WARNINGS
+        WIN32_LEAN_AND_MEAN
+        NOMINMAX
+    )
 endif()
 
 add_subdirectory(src/Core)

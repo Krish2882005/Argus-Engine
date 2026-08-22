@@ -12,7 +12,8 @@ Checks: >-
   -bugprone-easily-swappable-parameters,
   -readability-identifier-length,
   -cppcoreguidelines-avoid-magic-numbers,
-  -readability-magic-numbers
+  -readability-magic-numbers,
+  -readability-implicit-bool-conversion
 
 FormatStyle: file
 HeaderFilterRegex: '(src|include)[\\/]'
@@ -91,3 +92,5 @@ CheckOptions:
   # Exceptions
   - key: readability-identifier-naming.AllowedIdentifiers
     value: 'i,j,k,n,id,x,y,z,w,r,g,b,a,uv,dt,rc,fp,argc,argv,p,v'
+  - key: misc-include-cleaner.IgnoreHeaders
+    value: 'Windows Kits[\\/]10[\\/]Include[\\/].*\.h'
