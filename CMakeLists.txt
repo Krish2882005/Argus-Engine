@@ -22,6 +22,7 @@ if(MSVC)
         /Zc:preprocessor 
         /utf-8 
         /Gw
+        /wd4324
     )
     target_compile_definitions(argus_compiler_flags INTERFACE _CRT_SECURE_NO_WARNINGS)
 endif()

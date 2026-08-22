@@ -15,7 +15,7 @@ Checks: >-
   -readability-magic-numbers
 
 FormatStyle: file
-HeaderFilterRegex: 'src[\\/]'
+HeaderFilterRegex: '(src|include)[\\/]'
 
 CheckOptions:
   # Types
