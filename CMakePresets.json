@@ -36,7 +36,7 @@
             "displayName": "x64 Debug (Clang-Tidy)",
             "inherits": "x64-debug",
             "cacheVariables": {
-                "CMAKE_CXX_CLANG_TIDY": "clang-tidy;--header-filter=src[\\\\/];--extra-arg=/EHsc"
+                "CMAKE_CXX_CLANG_TIDY": "clang-tidy;--extra-arg=/EHsc"
             }
         },
         {
