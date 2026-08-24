@@ -1,0 +1,29 @@
+name: Windows CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+  
+    - name: Setup MSVC
+      uses: ilammy/msvc-dev-cmd@v1
+
+    - name: Setup vcpkg
+      uses: lukka/run-vcpkg@v11
+
+    - name: Configure CMake
+      run: cmake --preset x64-debug
+
+    - name: Build
+      run: cmake --build --preset debug
+
+    - name: Test
+      run: ctest --preset debug
