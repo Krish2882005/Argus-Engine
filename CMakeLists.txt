@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_EXTENSIONS False)
 
-find_package(GTest CONFIG REQUIRED)
+include(CTest)
 
 include(CheckIPOSupported)
 check_ipo_supported(RESULT ipo_supported OUTPUT error)
@@ -35,5 +35,10 @@ add_subdirectory(src/Core)
 add_subdirectory(src/Compute)
 add_subdirectory(src/SensorMock)
 add_subdirectory(src/ComputeEngine)
-add_subdirectory(tests)
+
+if(BUILD_TESTING)
+    find_package(GTest CONFIG REQUIRED)
+    add_subdirectory(tests)
+endif()
+
 add_subdirectory(benchmarks)
