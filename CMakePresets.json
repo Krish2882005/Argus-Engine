@@ -76,5 +76,29 @@
             "displayName": "Debug (Clang-Tidy)",
             "configurePreset": "x64-debug-tidy"
         }
+    ],
+    "testPresets": [
+        {
+            "name": "debug",
+            "displayName": "Debug Tests",
+            "configurePreset": "x64-debug",
+            "output": {
+                "outputOnFailure": true
+            },
+            "execution": {
+                "noTestsAction": "error"
+            }
+        },
+        {
+            "name": "release",
+            "displayName": "Release Tests",
+            "configurePreset": "x64-release",
+            "output": {
+                "outputOnFailure": true
+            },
+            "execution": {
+                "noTestsAction": "error"
+            }
+        }
     ]
 }
