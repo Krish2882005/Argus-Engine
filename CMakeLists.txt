@@ -31,10 +31,7 @@ if(MSVC)
     )
 endif()
 
-add_subdirectory(src/Core)
-add_subdirectory(src/Compute)
-add_subdirectory(src/SensorMock)
-add_subdirectory(src/ComputeEngine)
+add_subdirectory(src)
 
 if(BUILD_TESTING)
     find_package(GTest CONFIG REQUIRED)
